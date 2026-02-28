@@ -1,0 +1,15 @@
+[Unit]
+Description=Bulls and Cows Telegram Game Server
+After=network.target
+
+[Service]
+Type=simple
+User=lukasz
+WorkingDirectory=/home/lukasz/.openclaw/workspace/telegram-game
+ExecStart=/usr/bin/python3 /home/lukasz/.openclaw/workspace/telegram-game/server.py
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
